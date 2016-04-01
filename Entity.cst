@@ -1,0 +1,25 @@
+﻿<%-- 
+Name:
+Author: 
+Description: 
+--%>
+<%@ Template Language="C#" TargetLanguage="Text" %>
+<%-- 加载访问数据库的组件SchemaExplorer,并声明其使用的命名空间 --%>
+<%@ Assembly Name="SchemaExplorer" %>
+<%@ Import Namespace="SchemaExplorer" %>
+<%-- 要打印的表 --%>
+<%@ Property Name="Table" Type="TableSchema" DeepLoad="True" Optional="False" %>
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace Entity
+{
+    public class <%= Table.Name%>
+    {
+        <%foreach(ColumnSchema col in Table.Columns){ %>
+        public <%= col.DataType %> <%=col.Name %>{ get;set; }
+        <% } %>
+    }
+}

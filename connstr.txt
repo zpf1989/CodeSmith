@@ -1,0 +1,3 @@
+mss:Data Source=ZHANGPENGFEI;Initial Catalog=OpenAuthDB;Persist Security Info=True;User ID=sa;Password=1qaz2wsx
+ora:Server=127.0.0.1; Data Source=ORCL;User ID=system; Password=orcl;
+mysql:server=127.0.0.1;User ID=root;Password=root;database=jeecmsweb;
